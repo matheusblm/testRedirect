@@ -9,8 +9,8 @@ function App() {
       // Redirect to the app store for mobile devices
       if (storeName) {
         window.location.href = isIOS
-          ? `docgsx://home/petshop/${storeName}`
-          : `docgsx://home/petshop/${storeName}`;
+          ? `docgsx://petshop/${storeName}`
+          : `docgsx://petshop/${storeName}`;
       } else {
         // Redirect to the home page if store name is not provided
         window.location.href = "docgsx://";
