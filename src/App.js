@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useEffect } from "react";
+import { isMobile, isIOS } from "react-device-detect";
 function App() {
+  useEffect(() => {
+    if (isMobile) {
+      // Redirect to the app store for mobile devices
+      window.location.href = isIOS
+        ? `itms-apps://apps.apple.com/tr/app/docgx/id1530582505`
+        : `market://details?id=com.docgsx`;
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Welcome to our desktop website!</p>
     </div>
   );
 }
