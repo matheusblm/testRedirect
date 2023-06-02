@@ -10,7 +10,7 @@ function App() {
       if (storeName) {
         window.location.href = isIOS
           ? `docgsx://home/petshop/${storeName}`
-          : `docgsx://home/help`;
+          : `docgsx://home/petshop/${storeName}`;
       } else {
         // Redirect to the home page if store name is not provided
         window.location.href = "docgsx://";
