@@ -5,9 +5,7 @@ function App() {
   useEffect(() => {
     if (isMobile) {
       // Redirect to the app store for mobile devices
-      window.location.href = isIOS
-        ? `itms-apps://apps.apple.com/tr/app/docgx/id1530582505`
-        : `docgsx://`;
+      window.location.href = isIOS ? `docgx://` : `docgsx://`;
     }
   }, []);
 
