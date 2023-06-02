@@ -5,13 +5,14 @@ function App() {
   useEffect(() => {
     if (isMobile) {
       // Redirect to the app store for mobile devices
-      window.location.href = isIOS ? `docgx://` : `docgsx://`;
+      window.location.href = isIOS ? `docgsx://` : `docgsx://`;
     }
   }, []);
 
   return (
     <div>
       <p>Welcome to our desktop website!</p>
+      <a hre="docgsx://">Welcome to our desktop website!</a>
     </div>
   );
 }
